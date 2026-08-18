@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0a0f0d;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(45, 212, 191, 0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+  color: #dbe7e2;
+  font-family: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, monospace;
+}
+
+input[type="text"],
+input:not([type]) {
+  background: #0a0f0d;
+  border: 1px solid #1f2e29;
+  color: #dbe7e2;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 7px 9px;
+  outline: none;
+  border-radius: 2px;
+}
+
+input[type="text"]:focus,
+input:not([type]):focus {
+  border-color: #2dd4bf;
+}
+
+input[type="text"]::placeholder,
+input:not([type])::placeholder {
+  color: #3f524c;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #2dd4bf;
+  color: #2dd4bf;
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+button:hover {
+  background: rgba(45, 212, 191, 0.1);
+}
+
+button:active {
+  background: rgba(45, 212, 191, 0.2);
+}
+
+button:disabled {
+  border-color: #3f524c;
+  color: #3f524c;
+  cursor: default;
+  background: transparent;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #2dd4bf;
+  border-radius: 2px;
+  display: inline-grid;
+  place-content: center;
+  background: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  transform: scale(0);
+  transition: transform 100ms ease-in;
+  background: #2dd4bf;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2e29;
+}
